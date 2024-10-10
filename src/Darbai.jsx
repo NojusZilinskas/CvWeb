@@ -16,6 +16,7 @@ function DarbuSarasas() {
       <h1 className="portfolio">{portfolio.pavadinimas}</h1>
       <img src={portfolio.nuotrauka} alt={portfolio.pavadinimas} className="nuotraukadarb" />
       <p className="parag">{portfolio.aprasymas}</p>
+      <p className="nuo">Nuorodos: </p>
       <a href={portfolio.nuorodos.svetainė} className="nuor" target="_blank" rel="noopener noreferrer">
         Svetainė
       </a>

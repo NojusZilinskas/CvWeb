@@ -14,6 +14,9 @@ import Gebejimai from './Skills'
 // eslint-disable-next-line no-unused-vars
 import DarbuSarasas from './Darbai';
 
+// eslint-disable-next-line no-unused-vars
+import Footer from './Footeris'
+
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -22,6 +25,7 @@ function App() {
       <Informacija></Informacija>
       <Gebejimai/>
       <DarbuSarasas/>
+      <Footer/>
     </>
   )
 }
