@@ -1,33 +1,41 @@
-// import { useState } from 'react'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-// import './App.css'
-import Informacija from './Informacija/Informacija'
-// import Header from './Header'
-// import ClickCounter from './ClickCounter'
-
-
-// eslint-disable-next-line no-unused-vars
-import Gebejimai from './Skills'
-// eslint-disable-next-line no-unused-vars
+import Informacija from './Informacija/Informacija';
+import Gebejimai from './Skills';
 import DarbuSarasas from './Darbai';
+import Footer from './Footeris';
 
-// eslint-disable-next-line no-unused-vars
-import Footer from './Footeris'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 
 function App() {
-  // const [count, setCount] = useState(0)
+  const router = createBrowserRouter([
+    {
+      path: "/",   
+      element: <Informacija/>
+    },
+    {
+      path: "/2",             
+      element: <Gebejimai/>, 
+    },
+    {
+      path: "/3",  
+      element: <DarbuSarasas/>
+    },
+    {
+      path: "/footer",      
+      element: <Footer/>
+    },
+  ]);
 
   return (
     <>
-      <Informacija></Informacija>
-      <Gebejimai/>
-      <DarbuSarasas/>
-      <Footer/>
+      <RouterProvider router={router} /> 
+      <Footer /> 
     </>
-  )
+  );
 }
 
-export default App
+export default App;
